@@ -9,7 +9,7 @@ using Txt2Sql2;
 namespace Txt2Sql2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200117173758_init")]
+    [Migration("20200117222304_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -98,7 +98,7 @@ namespace Txt2Sql2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("gpds");
+                    b.ToTable("GERBER_PAS_DAILY");
                 });
 #pragma warning restore 612, 618
         }

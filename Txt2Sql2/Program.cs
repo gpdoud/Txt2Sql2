@@ -8,13 +8,6 @@ namespace Txt2Sql2 {
     class Program {
         static void Main(string[] args) {
 
-            var connStr = ConfigurationManager.Configuration.GetConnectionString("Db");
-            //var builder = new ConfigurationBuilder()
-            //                    .SetBasePath(Directory.GetCurrentDirectory())
-            //                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            //var configuration = builder.Build();
-            //var connStr = configuration.GetConnectionString("Db");
-
             var db = new AppDbContext();
 
             var gpd = new GerberPasDaily {
@@ -42,10 +35,10 @@ namespace Txt2Sql2 {
                 CLNDR_DT = "vv",
                 MEMO_CD = "ww"
             };
-            db.gpds.Add(gpd);
+            db.GERBER_PAS_DAILY.Add(gpd);
             db.SaveChanges();
 
-            var recs = db.gpds.ToList();
+            var recs = db.GERBER_PAS_DAILY.ToList();
         }
     }
 }

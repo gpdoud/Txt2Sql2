@@ -96,7 +96,7 @@ namespace Txt2Sql2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("gpds");
+                    b.ToTable("GERBER_PAS_DAILY");
                 });
 #pragma warning restore 612, 618
         }

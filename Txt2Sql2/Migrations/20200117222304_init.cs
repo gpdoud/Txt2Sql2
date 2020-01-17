@@ -7,7 +7,7 @@ namespace Txt2Sql2.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "gpds",
+                name: "GERBER_PAS_DAILY",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -38,14 +38,14 @@ namespace Txt2Sql2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_gpds", x => x.Id);
+                    table.PrimaryKey("PK_GERBER_PAS_DAILY", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "gpds");
+                name: "GERBER_PAS_DAILY");
         }
     }
 }

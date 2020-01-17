@@ -10,10 +10,11 @@ namespace Txt2Sql2 {
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
-        public DbSet<GerberPasDaily> gpds { get; set; }
+        public DbSet<GerberPasDaily> GERBER_PAS_DAILY { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) {
-            options.UseSqlServer("server=localhost\\sqlexpress;database=Text2Sql;trusted_connection=true;");
+            var connStr = ConfigurationManager.Configuration.GetConnectionString("Db");
+            options.UseSqlServer(connStr);
         }
 
         public AppDbContext() {
