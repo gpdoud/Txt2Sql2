@@ -9,7 +9,7 @@ using Txt2Sql2;
 namespace Txt2Sql2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200117222304_init")]
+    [Migration("20200117233342_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ namespace Txt2Sql2.Migrations
 
             modelBuilder.Entity("Txt2Sql2.GerberPasDaily", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PAS_ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -63,9 +63,6 @@ namespace Txt2Sql2.Migrations
                     b.Property<string>("MEMO_CD")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PAS_ID")
-                        .HasColumnType("int");
-
                     b.Property<string>("PLAN_CD")
                         .HasColumnType("nvarchar(max)");
 
@@ -96,7 +93,7 @@ namespace Txt2Sql2.Migrations
                     b.Property<string>("TRANS_DT")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("PAS_ID");
 
                     b.ToTable("GERBER_PAS_DAILY");
                 });

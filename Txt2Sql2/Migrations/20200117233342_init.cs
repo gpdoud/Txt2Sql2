@@ -10,9 +10,8 @@ namespace Txt2Sql2.Migrations
                 name: "GERBER_PAS_DAILY",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    PAS_ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PAS_ID = table.Column<int>(nullable: false),
                     SRC_CD = table.Column<string>(nullable: true),
                     ACCTG_BASIS_CD = table.Column<string>(nullable: true),
                     REF_ID = table.Column<string>(nullable: true),
@@ -38,7 +37,7 @@ namespace Txt2Sql2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GERBER_PAS_DAILY", x => x.Id);
+                    table.PrimaryKey("PK_GERBER_PAS_DAILY", x => x.PAS_ID);
                 });
         }
 

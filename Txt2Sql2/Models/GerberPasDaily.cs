@@ -6,7 +6,7 @@ using System.Text;
 namespace Txt2Sql2 {
     
     public class GerberPasDaily {
-        public int Id { get; set; }
+        [Key]
         public int PAS_ID { get; set; }
         public string SRC_CD { get; set; }
         public string ACCTG_BASIS_CD { get; set; }
